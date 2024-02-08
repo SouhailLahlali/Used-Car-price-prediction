@@ -55,7 +55,9 @@ def get_data(url):
         return []
 #get_data("https://www.wandaloo.com/occasion/ford-focus-diesel-occasion-casablanca-maroc/41617.html")
 i=0   
-for link in get_links("./csv_files/links3.csv"):
+
+#put your cvs file of links here
+for link in get_links("./csv_files/links.csv"):
     i+=1
     print("Car n :",i)
     data = get_data(link)
