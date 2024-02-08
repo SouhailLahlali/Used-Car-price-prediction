@@ -42,7 +42,7 @@ def get_data(url):
             Puissance_fiscale=cell.find_all("p",class_='value')[4].text
             Puissance_dynamique=cell.find_all("p",class_='value')[5].text
             data["Name"]=name
-            for i in range(1,7):
+            for i in range(1,8):
                 data[columns[i]]=clearfix_values[i-1].text.strip()
             data["Puissance_fiscale"]=Puissance_fiscale.replace('\n','')
             data["Puissance_dynamique"]=Puissance_dynamique.replace('\n','')
@@ -57,7 +57,7 @@ def get_data(url):
 i=0   
 
 #put your cvs file of links here
-for link in get_links("./csv_files/links.csv"):
+for link in get_links("./csv_files/links2.csv"):
     i+=1
     print("Car n :",i)
     data = get_data(link)
